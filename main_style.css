@@ -118,11 +118,39 @@ nav ul li a{
 .sec-3{
     width: 100%;
     height: 1115px;
-    background-color: #E3E1C3;
+    background-color: #EAE9BA;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center
+
+
+}
+
+.rows{
+    display: grid;
+    grid-template-rows: 330px 330px 330px;
+    grid-template-columns: 400px 400px 400px;
+    justify-content: space-around;
+    position: relative;
+    top: 3.5%;
+    width: 96%;
+}
+
+.rows img{
+    position: relative;
+    right: 5.3%;
+    width: 440px;
+    height: 300px;
+    border-style: solid;
+    border-width: 20px;
 }
 
 .footer{
     width: 100%;
     height: 265px;
     background-color: #3B2929;
+}
+
+.icons{
+    display: inline-block;
 }
