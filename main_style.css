@@ -61,6 +61,10 @@ nav ul li a{
     color: white;
 }
 
+#current-page{
+    color: #FFF500;
+}
+
 #main-tarp{
     position: relative;
     width: 1360px;
@@ -150,13 +154,14 @@ nav ul li a{
     height: 230px;
     background-color: #3B2929;
     padding: 40px 20px;
+    position: relative;
 
 }
 
 .icons{
     display: inline-block;
     position: relative;
-    width: 330px;
+    width: 55%;
     height: 50px;
     left: 30px;
     margin-bottom: 20px;
@@ -170,34 +175,30 @@ nav ul li a{
 
 .footer h5{
     position: relative;
-    left: 45px;
-    top: 10px;
+    left: 18px;
+    top: 15px;
     color: white;
     letter-spacing: 2px;
 }
 
 .footer p{
     position: relative;
-    left: 45px;
-    top: 10px;
+    left: 16px;
+    top: 15px;
     color: rgb(152, 152, 152);
 }
 
-.footer-logo{
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    float: right;
-    bottom: 60%;
-    right: 20px;
-}
-
 .footer-logo img{
+    position: absolute;
     width: 80px;
     height: 80px;
+    left: 89.8%;
+    bottom: 28%;
 }
 
 .footer-logo p{
-    position: inherit;
-    right: 20px;
+    position: absolute;
+    left: 89%;
+    top: 72%;
+    color: white;
 }
