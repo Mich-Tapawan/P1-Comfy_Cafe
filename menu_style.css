@@ -74,8 +74,8 @@ nav ul li a{
 .container{
     position: relative;
     background-color: #EAE9BA;
-    width: 1151px;
-    height: 1019px;
+    width: 100%;
+    height: 900px;
     border-radius: 40px;
     padding: 20px 70px;
     display: flex;
@@ -88,7 +88,6 @@ nav ul li a{
     height: 4px;
     border-radius: 4px;
     background: #513B3B; 
-
 }
 
 .top{
@@ -99,21 +98,22 @@ nav ul li a{
 
 .top h1{
     color: #513B3B; 
-    font-size: 50px;
+    font-size: 62px;
     position: relative;
-    left: 40%;
+    left: 0%;
 }
 
 .content {
     display: flex;
     flex: 1;
+    margin-top: 42px;
   }
 
 .categories{
     padding-top: 30px;
     width: 30%;
     color: #513B3B;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
 }
 
@@ -127,9 +127,11 @@ nav ul li a{
 }
 
 .beverages{
-    height: 100px;
+    height: 600px;
     flex: 1;
     display: grid;
+    margin-top: 42px;
+    background-color: blue;
 }
 
 .footer{
