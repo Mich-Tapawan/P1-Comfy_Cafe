@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+    // Top nav
     var navbar = document.getElementById("fixedNav");
     var navName = document.getElementById("nav-name");
     var navLogo = document.getElementById("logo");
@@ -25,8 +26,33 @@ document.addEventListener("DOMContentLoaded", function () {
         navName.style.fontSize = "35px";
         navName.style.left = "0px";
         navLinks.style.bottom = "0px";
+
       }
     });
+
+    // Item category selection
+
+    // collect all the items and store in an array
+    // create a 2D list of sources for the different image categories imageSources = [categoryNum][looping through every string]
+    // create a loop that changes the image sources and h4 tag texts for each item
+
+    //let i = 0
+    // for (item in items){
+    //    item.style.image.src = imageSources[cat][i]
+    //    i++
+    //     }
+    let items = document.getElementsByClassName(items);
+    const imageSources = [['Media/cold-brew.jpg', 'Media/americano.png', 'Media/Espresso.png', 'Media/choco.png',
+                           'Media/cappuccino.png', 'Media/Latte.jpg', 'Media/mocha.png"', 'Media/matcha.png',
+                           'Media/affogato.png', 'Media/macchiato.png', 'Media/black.png', 'Media/caramel.png'],
+                          ['Media/'], [], [], [], [], [], [], []]
+    function changeCategory(category){
+      if ( category == "coffee"){
+        
+      }
+    }
+
+    document.getElementById("coffee").addEventListener("click",changeCategory("coffee"))
   });
 
   let image = document.getElementById('main-tarp');;
