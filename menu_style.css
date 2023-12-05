@@ -119,6 +119,7 @@ nav ul li a{
 
 .categories li{
     color: #6E5252;
+    width: 40px;
 }
 
 .categories li:hover{
@@ -135,6 +136,7 @@ nav ul li a{
     grid-template-columns: 150px 150px 150px 150px;
     grid-row-gap: 60px;
     justify-content: space-around;
+    transition: transform .5s;
 }
 
 .items{
@@ -149,6 +151,7 @@ nav ul li a{
 
 .items img{
     box-shadow: 1px 1px 15px rgb(146, 145, 145);
+    object-fit: cover;
 }
 
 .items img:hover{
