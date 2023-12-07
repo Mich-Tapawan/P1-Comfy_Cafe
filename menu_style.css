@@ -120,6 +120,7 @@ nav ul li a{
 .categories li{
     color: #6E5252;
     width: 40px;
+    opacity: 0.7;
 }
 
 .categories li:hover{
@@ -156,6 +157,9 @@ nav ul li a{
 
 .items img:hover{
     transform: scale(1.1);
+    border-color: #513B3B;
+    border-width: 2px;
+    border-style: solid;
 }
 
 .items img{
@@ -170,7 +174,6 @@ nav ul li a{
     background-color: #3B2929;
     padding: 40px 20px;
     position: relative;
-
 }
 
 .icons{
