@@ -1,2 +1,2 @@
 # Project-1---Comfy-Cafe
-A project that is built from HTML, CSS, and JavaScript
+Solo project that is built with HTML, CSS, and JavaScript
