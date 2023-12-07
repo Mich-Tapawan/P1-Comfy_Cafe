@@ -31,31 +31,35 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Hero section banners cycle
-  let image = document.getElementById('main-tarp');;
-  let images = ['Media/main-spread1.jpg','Media/main-spread2.jpg','Media/main-spread3.jpg']
+  // Highlight selected category
+  function highlightText(e){
+    var key = e.target;
+    let inactiveTexts = document.getElementById('beverages').getElementsByTagName('li');
+    inactiveTexts.style.opacity = '0.5';
+    key.style.opacity = '1';
+  }
   
-  setInterval(function(){
-  let random = Math.floor(Math.random() * images.length);
-  image.src = images[random]}, 5000)
+  document.getElementById('list1').addEventListener('click', highlightText);
 
+  // Item category toggling
   let items = document.getElementById('beverages').getElementsByTagName('img');
   let labels = document.getElementById('beverages').getElementsByTagName('h4');
   const imageSources = [['Media/cold-brew.jpg', 'Media/americano.png', 'Media/Espresso.png', 'Media/choco.png',
                          'Media/cappuccino.png', 'Media/Latte.jpg', 'Media/mocha.png', 'Media/matcha.png',
                          'Media/affogato.png', 'Media/macchiato.png', 'Media/black.png', 'Media/caramel.png'],
                         ['Media/blackTea.webp', 'Media/greenTea.png', 'Media/matchaTea.jpg', 'Media/yellowTea.webp',
-                         'Media/jasmineTea.jpg', 'Media/', 'Media/', 'Media/',
-                         'Media/', 'Media/', 'Media/', 'Media/',],
-                          [], [], [], [], [], [], []]
+                         'Media/jasmineTea.jpg', 'Media/peppermintTea.png', 'Media/oolongTea.jpg', 'Media/chaiTea.jpg',
+                         'Media/gingerTea.png', 'Media/redTea.png', 'Media/lemonTea.png', 'Media/hibiscusTea.png'],
+                        [], [], [], [], [], [], []]
   
   const itemLabels = [['COLD BREW', 'AMERICANO', 'ESPRESSO', 'HOT CHOCO',
                        'CAPPUCCINO', 'LATTE', 'CAFE MOCHA', 'MATCHA',
                        'AFFOGATO', 'MACCHIATO', 'LONG BLACK', 'CARAMEL'],
                       ['BLACK TEA', 'GREEN TEA', 'MATCHA TEA', 'YELLOW TEA',
-                       'JASMINE TEA']]
+                       'JASMINE TEA', 'PEPPERMINT', 'OOLONG TEA', 'CHAI TEA',
+                       'GINGER TEA', 'RED TEA', 'LEMON TEA', 'HIBISCUS TEA'],
+                      [], [], [], [], [], [], []]
   
-  // Item category toggling
   function changeCategory(category){
     if ( category == "coffee"){
       for (let i = 0; i < items.length; i++){
