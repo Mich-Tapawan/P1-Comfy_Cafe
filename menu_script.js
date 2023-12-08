@@ -31,16 +31,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Highlight selected category
-  function highlightText(e){
-    var key = e.target;
-    let inactiveTexts = document.getElementById('beverages').getElementsByTagName('li');
-    inactiveTexts.style.opacity = '0.5';
-    key.style.opacity = '1';
-  }
-  
-  document.getElementById('list1').addEventListener('click', highlightText);
-
   // Item category toggling
   let items = document.getElementById('beverages').getElementsByTagName('img');
   let labels = document.getElementById('beverages').getElementsByTagName('h4');
