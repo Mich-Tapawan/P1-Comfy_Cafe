@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Inknut Antiqua', serif;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+#bg{
+    width: 100%;
+    height: 160%;
+    position: absolute;
+    filter: brightness(0.5);
+}
+
+nav{
+    display: flex;
+    margin-right: 30px;
+    padding-top: 15px;
+    position: fixed;
+    color: #fff;
+    width: 100%;
+    z-index: 1000;
+    transition: 0.3s ease;
+}
+
+nav img{
+    margin-left: 22px;
+    position: relative;
+    width: 63px;
+    height: 63px;
+    transition: 0.3s ease;
+}
+nav h2{
+    padding-left: 20px;
+    font-size: 35px;
+    bottom: 15px;
+    position: relative;
+    font-family: 'Inknut Antiqua', serif;
+    font-weight: 400;
+    transition: 0.3s ease;
+}
+
+nav ul{
+    position: relative;
+    justify-content: space-between;
+    left: 44%;
+    float: right;
+    margin-right: 20px;
+
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 65px;
+    margin: 0 30px;
+}
+
+nav ul li a{
+    color: white;
+}
+
+.upper{
+    background: #493d3d;
+    min-height: 100vh;
+    width: 100%;
+    color: #fff;
+    padding: 100px 30px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.footer{
+    width: 100%;
+    height: 230px;
+    background-color: #3B2929;
+    padding: 40px 20px;
+    position: relative;
+}
+
+.icons{
+    display: inline-block;
+    position: relative;
+    width: 55%;
+    height: 50px;
+    left: 30px;
+    margin-bottom: 20px;
+}
+
+.icons svg{
+    width: 57px;
+    height: 57px;
+    margin: 0 10px;
+}
+
+.footer h5{
+    position: relative;
+    left: 18px;
+    top: 15px;
+    color: white;
+    letter-spacing: 2px;
+}
+
+.footer p{
+    position: relative;
+    left: 16px;
+    top: 15px;
+    color: rgb(152, 152, 152);
+}
+
+.footer-logo img{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    left: 89.8%;
+    bottom: 28%;
+}
+
+.footer-logo p{
+    position: absolute;
+    left: 89%;
+    top: 72%;
+    color: white;
+}
