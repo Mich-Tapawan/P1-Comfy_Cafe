@@ -26,7 +26,8 @@ document.addEventListener("DOMContentLoaded", function () {
         navName.style.fontSize = "35px";
         navName.style.left = "0px";
         navLinks.style.bottom = "0px";
-
       }
     });
+
+    //Google Maps API
   });
