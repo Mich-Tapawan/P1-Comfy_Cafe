@@ -29,5 +29,29 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
 
-    //Google Maps API
+    //Form submit
+    const express = require('express');
+    const port = process.env.PORT || 5000; // Port number
+
+    const app = express();
+
+    //API Middlewares
+    app.use(express.json()); // Form data accept in json format
+    
+    app.use(express.urlencoded()); // html form data decoder
+
+    app.use(express.static('public'));
+
+    //API Routes
+    app.get('/form',(req, res)=>{
+      res.sendFile(__dirname + '/Users/Mich/Desktop/Mik/Coding/Portfolio/P1-Comfy_Cafe/contact.html');
+    })
+
+    app.post('/formPost', (req, res)=>{
+      console.log(req.body);
+    })
+
+    app.listen(port, ()=>{
+      console.log(`Server started at https://localhost:${port}`)
+    })
   });
