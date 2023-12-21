@@ -151,6 +151,13 @@ nav ul li a{
     height: 300px;
     border-style: solid;
     border-width: 20px;
+    transition: transform 1s;
+}
+
+.rows img:hover{
+    transform: scale(1.0);
+    border: 0;
+    border-radius: 15px;
 }
 
 .footer{
