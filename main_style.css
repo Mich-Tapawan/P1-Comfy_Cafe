@@ -115,12 +115,27 @@ nav ul li a{
     position: relative;
     font-size: 45px;
     font-weight: 100;
+    animation: SlideInRight 1s ease;
+    animation-timeline: view();
+    animation-range: 40px 680px;
 }
 
 .sec-2-texts p{
     position: relative;
     font-size: 16px;
     font-weight: 100;
+    animation: SlideInRight 1s ease;
+    animation-timeline: view();
+    animation-range: 0px 580px;
+}
+
+@keyframes SlideInRight{
+    from{
+        transform: translateX(400px);
+    }
+    to{
+        transform: translateX(0);
+    }
 }
 
 .sec-3{
@@ -151,7 +166,7 @@ nav ul li a{
     height: 300px;
     border-style: solid;
     border-width: 20px;
-    transition: transform 1s ease-out;
+    transition: transform 1s ease, border 0s ease-in-out, border-radius 0s ease-in-out;
 }
 
 .rows img:hover{
