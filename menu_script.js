@@ -18,22 +18,12 @@ document.addEventListener("DOMContentLoaded", function () {
                        'GINGER TEA', 'RED TEA', 'LEMON TEA', 'HIBISCUS TEA'],
                       [], [], [], [], [], [], []]
   
-  function changeCategory(category){
-    if ( category == "coffee"){
+  document.querySelectorAll('.category').forEach(function(category){
+    category.onclick = function() {
       for (let i = 0; i < items.length; i++){
-        items[i].src = imageSources[0][i];
-        labels[i].textContent = itemLabels[0][i];
+        items[i].src = imageSources[category.dataset.index][i];
+        labels[i].textContent = itemLabels[category.dataset.index][i];
       }
     }
-
-    else if ( category == "tea"){
-      for (let i = 0; i < items.length; i++){
-        items[i].src = imageSources[1][i];
-        labels[i].textContent = itemLabels[1][i];  
-      }
-    }
-    }
-
-  document.getElementById('coffee').addEventListener('click', function() {changeCategory('coffee');});
-  document.getElementById('tea').addEventListener('click', function() {changeCategory('tea');});
+  })
 });
