@@ -61,6 +61,64 @@ nav ul li a{
     color: white;
 }
 
+.order{
+    height: 667px;
+    width: 80%;
+    background-color: white;
+    position: fixed;
+    display: block;
+    padding: 20px 10px;
+    border-radius: 25px;
+}
+
+.left{
+    height: 100%;
+    width: 50%;
+    display: inline-block;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left img{
+    position: relative;
+    height: 80%;
+    width: 60%;
+    bottom: 5%;
+}
+
+.right{
+    height: 100%;
+    width: 50%;
+    display: inline-block;
+}
+
+.right svg{
+    color: #3B2929;
+    position: relative;
+    left: 90%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.trans{
+    position: relative;
+    width: 80%;
+    top: 10%;
+}
+
+.right h1{
+    color: #3B2929;
+}
+
+.right p{
+    color: rgb(153, 153, 153);
+    font-size: 15px;
+}
+
+
 .upper{
     background: #493d3d;
     min-height: 100vh;
