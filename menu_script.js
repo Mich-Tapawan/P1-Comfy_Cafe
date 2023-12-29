@@ -26,4 +26,17 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
   })
+
+  if (document.querySelector('.order').style.display !== 'none'){
+    document.querySelector('body').style.height = '100%';
+    document.querySelector('body').style.overflowY = 'hidden';
+    let bg = document.querySelector('.container')
+    bg.style.webkitFilter = "blur(3px)";
+  }
+
+  document.querySelector('#return').onclick = function(){
+    document.querySelector('body').style.overflowY = 'scroll';
+    document.querySelector('.order').style.display = 'none';
+    document.querySelector('.container').style.webkitFilter = "blur(0px)";
+  }
 });
