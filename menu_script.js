@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Item category toggling
-  let items = document.getElementById('beverages').querySelectorAll('img');
+  let items = document.getElementById('beverages').getElementsByTagName('img');
   let labels = document.getElementById('beverages').getElementsByTagName('h4');
   const imageSources = [[coldBrew = {source: 'Media/cold-brew.jpg', label:'COLD BREW', description:''},
                         americano = {source:'Media/americano.png', label:'AMERICANO', description:''},
@@ -31,9 +31,9 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll('.category').forEach(function(category){
     category.onclick = function() {
       for (let i = 0; i < items.length; i++){
-        let item = imageSources[category.dataset.index][i]
-        items[i].src = item.source
-        labels[i].textContent = item.label
+        let item = imageSources[category.dataset.index][i];
+        items[i].src = item['source'];
+        labels[i].textContent = item['label'];
       }
     }
   });
