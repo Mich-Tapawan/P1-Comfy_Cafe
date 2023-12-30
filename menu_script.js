@@ -1,30 +1,39 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Item category toggling
-  let items = document.getElementById('beverages').getElementsByTagName('img');
+  let items = document.getElementById('beverages').querySelectorAll('img');
   let labels = document.getElementById('beverages').getElementsByTagName('h4');
-  const imageSources = [{coldBrew:'Media/cold-brew.jpg', americano:'Media/americano.png', espresso:'Media/Espresso.png', choco:'Media/choco.png',
-                         cappuccino:'Media/cappuccino.png', latte:'Media/Latte.jpg', mocha:'Media/mocha.png', matcha:'Media/matcha.png',
-                         affogato:'Media/affogato.png', macchiato:'Media/macchiato.png', black:'Media/black.png', caramel:'Media/caramel.png'},
-                        {blackTea:'Media/blackTea.webp', greenTea:'Media/greenTea.png', matchaTea:'Media/matchaTea.jpg', yellowTea:'Media/yellowTea.webp',
-                        jasmineTea:'Media/jasmineTea.jpg', peppermintTea:'Media/peppermintTea.png', oolongTea:'Media/oolongTea.jpg', chaiTea:'Media/chaiTea.jpg',
-                        gingerTea:'Media/gingerTea.png', redTea:'Media/redTea.png', lemonTea:'Media/lemonTea.png', hibiscusTea:'Media/hibiscusTea.png'},
+  const imageSources = [[coldBrew = {source: 'Media/cold-brew.jpg', label:'COLD BREW', description:''},
+                        americano = {source:'Media/americano.png', label:'AMERICANO', description:''},
+                        espresso = {source:'Media/Espresso.png', label:'ESPRESSO', description:''},
+                        choco = {source:'Media/choco.png', label:'HOT CHOCO', description:''},
+                        cappuccino = {source:'Media/cappuccino.png', label:'CAPPUCCINO', description:''},
+                        latte = {source:'Media/Latte.jpg', label:'LATTE', description:''},
+                        mocha = {source:'Media/mocha.png', label:'CAFE MOCHA', description:''},
+                        matcha = {source:'Media/matcha.png', label:'MATCHA', description:''},
+                        affogato = {source:'Media/affogato.png', label:'AFFOGATO', description:''},
+                        macchiato = {source:'Media/macchiato.png', label:'MACCHIATO', description:''},
+                        black = {source:'Media/black.png', label:'LONG BLACK', description:''},
+                        caramel = {source:'Media/caramel.png', label:'CARAMEL', description:''}],
+                        [blackTea = {source:'Media/blackTea.webp', label:'BLACK TEA', description:''},
+                        greenTea = {source:'Media/greenTea.png', label:'GREEN TEA', description:''},,
+                        matchaTea = {source:'Media/matchaTea.jpg', label:'MATCHA TEA', description:''},
+                        yellowTea = {source:'Media/yellowTea.webp', label:'YELLOW TEA', description:''},
+                        jasmineTea = {source:'Media/jasmineTea.jpg', label:'JASMINE TEA', description:''},
+                        peppermintTea = {source:'Media/peppermintTea.png', label:'PEPPERMINT TEA', description:''},
+                        oolongTea = {source:'Media/oolongTea.jpg', label:'OOLONG TEA', description:''},
+                        chaiTea = {source:'Media/chaiTea.jpg', label:'CHAI TEA', description:''},
+                        gingerTea = {source:'Media/gingerTea.png', label:'GINGER TEA', description:''},
+                        redTea = {source:'Media/redTea.png', label:'RED TEA', description:''},
+                        lemonTea = {source:'Media/lemonTea.png', label:'LEMON TEA', description:''},
+                        hibiscusTea = {source:'Media/hibiscusTea.png', label:'HIBISCUS TEA', description:''}],
                         [], [], [], [], [], [], []]
-  
-  const itemLabels = [['COLD BREW', 'AMERICANO', 'ESPRESSO', 'HOT CHOCO',
-                       'CAPPUCCINO', 'LATTE', 'CAFE MOCHA', 'MATCHA',
-                       'AFFOGATO', 'MACCHIATO', 'LONG BLACK', 'CARAMEL'],
-                      ['BLACK TEA', 'GREEN TEA', 'MATCHA TEA', 'YELLOW TEA',
-                       'JASMINE TEA', 'PEPPERMINT', 'OOLONG TEA', 'CHAI TEA',
-                       'GINGER TEA', 'RED TEA', 'LEMON TEA', 'HIBISCUS TEA'],
-                      [], [], [], [], [], [], []]
 
   document.querySelectorAll('.category').forEach(function(category){
     category.onclick = function() {
       for (let i = 0; i < items.length; i++){
-        let current = imageSources[category.dataset.index]
-        let val = Object.values(current)
-        items[i].src = val[i];
-        labels[i].textContent = itemLabels[category.dataset.index][i];
+        let item = imageSources[category.dataset.index][i]
+        items[i].src = item.source
+        labels[i].textContent = item.label
       }
     }
   });
