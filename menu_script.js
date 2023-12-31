@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         black = {source:'Media/black.png', label:'LONG BLACK', description:''},
                         caramel = {source:'Media/caramel.png', label:'CARAMEL', description:''}],
                         [blackTea = {source:'Media/blackTea.webp', label:'BLACK TEA', description:''},
-                        greenTea = {source:'Media/greenTea.png', label:'GREEN TEA', description:''},,
+                        greenTea = {source:'Media/greenTea.png', label:'GREEN TEA', description:''},
                         matchaTea = {source:'Media/matchaTea.jpg', label:'MATCHA TEA', description:''},
                         yellowTea = {source:'Media/yellowTea.webp', label:'YELLOW TEA', description:''},
                         jasmineTea = {source:'Media/jasmineTea.jpg', label:'JASMINE TEA', description:''},
