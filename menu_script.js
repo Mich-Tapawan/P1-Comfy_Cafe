@@ -43,8 +43,11 @@ document.addEventListener("DOMContentLoaded", function () {
     image.onclick = () =>{
 
       let currentImage = document.querySelector('#current_image');
-      currentImage.src = image.src;
-      let itemName = document.querySelector('.trans').getElementsByTagName('h1')
+      let selectedImage = image.querySelector('img');
+      currentImage.src = selectedImage.src;
+      let itemName = document.querySelector('.trans').querySelector('h1');
+      let selectedName = image.querySelector('h4');
+      itemName.textContent = selectedName.textContent;
 
       document.querySelector('.order').style.display = 'block';
       document.querySelector('body').style.height = '100%';
