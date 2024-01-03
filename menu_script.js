@@ -2,30 +2,30 @@ document.addEventListener("DOMContentLoaded", function () {
   // Item category toggling
   let items = document.getElementById('beverages').getElementsByTagName('img');
   let labels = document.getElementById('beverages').getElementsByTagName('h4');
-  const imageSources = [[coldBrew = {source: 'Media/cold-brew.jpg', label:'COLD BREW', description:''},
-                        americano = {source:'Media/americano.png', label:'AMERICANO', description:''},
-                        espresso = {source:'Media/Espresso.png', label:'ESPRESSO', description:''},
-                        choco = {source:'Media/choco.png', label:'HOT CHOCO', description:''},
-                        cappuccino = {source:'Media/cappuccino.png', label:'CAPPUCCINO', description:''},
-                        latte = {source:'Media/Latte.jpg', label:'LATTE', description:''},
-                        mocha = {source:'Media/mocha.png', label:'CAFE MOCHA', description:''},
-                        matcha = {source:'Media/matcha.png', label:'MATCHA', description:''},
-                        affogato = {source:'Media/affogato.png', label:'AFFOGATO', description:''},
-                        macchiato = {source:'Media/macchiato.png', label:'MACCHIATO', description:''},
-                        black = {source:'Media/black.png', label:'LONG BLACK', description:''},
-                        caramel = {source:'Media/caramel.png', label:'CARAMEL', description:''}],
-                        [blackTea = {source:'Media/blackTea.webp', label:'BLACK TEA', description:''},
-                        greenTea = {source:'Media/greenTea.png', label:'GREEN TEA', description:''},
-                        matchaTea = {source:'Media/matchaTea.jpg', label:'MATCHA TEA', description:''},
-                        yellowTea = {source:'Media/yellowTea.webp', label:'YELLOW TEA', description:''},
-                        jasmineTea = {source:'Media/jasmineTea.jpg', label:'JASMINE TEA', description:''},
-                        peppermintTea = {source:'Media/peppermintTea.png', label:'PEPPERMINT TEA', description:''},
-                        oolongTea = {source:'Media/oolongTea.jpg', label:'OOLONG TEA', description:''},
-                        chaiTea = {source:'Media/chaiTea.jpg', label:'CHAI TEA', description:''},
-                        gingerTea = {source:'Media/gingerTea.png', label:'GINGER TEA', description:''},
-                        redTea = {source:'Media/redTea.png', label:'RED TEA', description:''},
-                        lemonTea = {source:'Media/lemonTea.png', label:'LEMON TEA', description:''},
-                        hibiscusTea = {source:'Media/hibiscusTea.png', label:'HIBISCUS TEA', description:''}],
+  const imageSources = [[{source: 'Media/cold-brew.jpg', label:'COLD BREW', price: '', description:''},
+                        {source:'Media/americano.png', label:'AMERICANO', price: '', description:''},
+                        {source:'Media/Espresso.png', label:'ESPRESSO', price: '', description:''},
+                        {source:'Media/choco.png', label:'HOT CHOCO', price: '', description:''},
+                        {source:'Media/cappuccino.png', label:'CAPPUCCINO', price: '', description:''},
+                        {source:'Media/Latte.jpg', label:'LATTE', price: '', description:''},
+                        {source:'Media/mocha.png', label:'CAFE MOCHA', price: '', description:''},
+                        {source:'Media/matcha.png', label:'MATCHA', price: '', description:''},
+                        {source:'Media/affogato.png', label:'AFFOGATO', price: '', description:''},
+                        {source:'Media/macchiato.png', label:'MACCHIATO', price: '', description:''},
+                        {source:'Media/black.png', label:'LONG BLACK', price: '', description:''},
+                        {source:'Media/caramel.png', label:'CARAMEL', price: '', description:''}],
+                        [{source:'Media/blackTea.webp', label:'BLACK TEA', price: '', description:''},
+                        {source:'Media/greenTea.png', label:'GREEN TEA', price: '', description:''},
+                        {source:'Media/matchaTea.jpg', label:'MATCHA TEA', price: '', description:''},
+                        {source:'Media/yellowTea.webp', label:'YELLOW TEA', price: '', description:''},
+                        {source:'Media/jasmineTea.jpg', label:'JASMINE TEA', price: '', description:''},
+                        {source:'Media/peppermintTea.png', label:'PEPPERMINT TEA', price: '', description:''},
+                        {source:'Media/oolongTea.jpg', label:'OOLONG TEA', price: '', description:''},
+                        {source:'Media/chaiTea.jpg', label:'CHAI TEA', price: '', description:''},
+                        {source:'Media/gingerTea.png', label:'GINGER TEA', price: '', description:''},
+                        {source:'Media/redTea.png', label:'RED TEA', price: '', description:''},
+                        {source:'Media/lemonTea.png', label:'LEMON TEA', price: '', description:''},
+                        {source:'Media/hibiscusTea.png', label:'HIBISCUS TEA', price: '', description:''}],
                         [], [], [], [], [], [], []]
 
   let categoryIndex = 0;
@@ -45,13 +45,10 @@ document.addEventListener("DOMContentLoaded", function () {
     image.onclick = () =>{
 
       let currentItem = imageSources[categoryIndex][image.dataset.itemNum];
-
-      let currentImage = document.querySelector('#current_image');
-      let selectedImage = image.querySelector('img');
-      currentImage.src = selectedImage.src;
-      let itemName = document.querySelector('.trans').querySelector('h1');
-      let selectedName = image.querySelector('h4');
-      itemName.textContent = selectedName.textContent;
+      let imagePlaceholder = document.querySelector('#current_image');
+      let textPlaceholder = document.querySelector('.trans').querySelector('h1');
+      imagePlaceholder.src = currentItem.source;
+      textPlaceholder.textContent = currentItem.label;
 
       document.querySelector('.order').style.display = 'block';
       document.querySelector('body').style.height = '100%';
