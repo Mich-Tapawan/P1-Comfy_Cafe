@@ -28,10 +28,12 @@ document.addEventListener("DOMContentLoaded", function () {
                         hibiscusTea = {source:'Media/hibiscusTea.png', label:'HIBISCUS TEA', description:''}],
                         [], [], [], [], [], [], []]
 
+  let categoryIndex = 0;
   document.querySelectorAll('.category').forEach(function(category){
     category.onclick = function() {
       for (let i = 0; i < items.length; i++){
         let item = imageSources[category.dataset.index][i];
+        categoryIndex = category.dataset.index;
         items[i].src = item['source'];
         labels[i].textContent = item['label'];
       }
@@ -41,6 +43,8 @@ document.addEventListener("DOMContentLoaded", function () {
   // Ordering Transaction Div - display and hide UI function
   document.querySelectorAll('.items').forEach(image => {
     image.onclick = () =>{
+
+      let currentItem = imageSources[categoryIndex][image.dataset.itemNum];
 
       let currentImage = document.querySelector('#current_image');
       let selectedImage = image.querySelector('img');
