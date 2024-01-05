@@ -83,10 +83,22 @@ nav ul li a{
 
 .left img{
     position: relative;
+    transform: translateX(-40px);
     height: 80%;
     width: 60%;
     bottom: 5%;
 }
+
+.vl {
+    border-left: 4px solid rgb(192, 192, 192);
+    opacity: 20%;
+    height: 600px;
+    position: absolute;
+    left: 50%;
+    margin-left: -3px;
+    top: 26px;
+    transform: translateX(-80px);
+  }
 
 .right{
     height: 100%;
@@ -106,7 +118,7 @@ nav ul li a{
 .trans{
     position: relative;
     width: 80%;
-    top: 10%;
+    top: 8%;
 }
 
 .right h1{
@@ -116,10 +128,54 @@ nav ul li a{
 .right p{
     color: rgb(153, 153, 153);
     font-size: 15px;
+    line-height: 1.6;
 }
 
-.right label{
+.sizes{
+    margin-top: 10px;
+}
+
+.sizes label{
     color: #3B2929;
+    cursor: pointer;
+}
+
+#amount{
+    margin-top: 10px;
+    padding-left: 5px;
+    margin-right: 10px;
+    outline: none;
+}
+
+#addItem{
+    background-color: #f1f0a2;
+    width: 150px;
+    height: 40px;
+    border: none;
+    color:#3B2929;
+    cursor: pointer;
+}
+
+.viewOrder{
+    margin-top: 40px;
+    width: 200px;
+    height: 50px;
+    background-color:#3B2929;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.viewOrder h4{
+    position: relative;
+}
+
+.viewOrder svg{
+    position: relative;
+    left: 2px;
+    margin-right: 8px;
 }
 
 
