@@ -173,7 +173,7 @@ input[type="radio"]:checked+label{
 
 #addItem{
     position: relative;
-    top: 1px;
+    top: 1  px;
     background-color: #868686;
     width: 100px;
     height: 40px;
