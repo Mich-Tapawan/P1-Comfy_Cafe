@@ -114,17 +114,24 @@
                     <p>An affogato, more traditionally known as "affogato al caffè", is an Italian coffee-based dessert.
                          It usually takes the form of a scoop of plain milk-flavored or vanilla gelato or ice cream topped
                           or "drowned" with a shot of hot espresso.</p>
-                    <form action="">
+                    <form action="" method="post">
                         <div class="sizes">
-                            <input type="radio" name="size" id="small" checked="checked">
+                            <input type="radio" name="size" id="small" value="small" checked="checked">
                             <label for="small">Small</label>
-                            <input type="radio" name="size" id="medium">
+                            <input type="radio" name="size" id="medium" value="medium">
                             <label for="medium">Medium</label>
-                            <input type="radio" name="size" id="large">
+                            <input type="radio" name="size" id="large" value="large">
                             <label for="large">Large</label>
                         </div>
-                        <input type="text" name="" id="amount" placeholder="Amount">
-                        <input type="submit" name="" id="addItem" value="ADD">
+                         <div class="amountContainer">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" id="minus">
+                                <path fill="#3b2929" d="M19 12.998H5v-2h14z"/></svg>
+                            <input type="text" name="" id="amount" value="Amount: 1" readonly="readonly">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" id="plus">
+                                <path fill="#3b2929" d="M19 12.998h-6v6h-2v-6H5v-2h6v-6h2v6h6z"/></svg>
+                        </div>
+                        <h4 id="total">Total:</h4>
+                        <input type="submit" name="" id="addItem" value="ADD ITEM">
                         <div class="viewOrder">
                             <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
                                 <circle cx="176" cy="416" r="32" fill="white"/><circle cx="400" cy="416" r="32" fill="white"/>
