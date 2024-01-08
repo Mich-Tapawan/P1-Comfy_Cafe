@@ -63,6 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
       let chosenSize = document.getElementsByName('size');
       let addedPrice = 1;
       totalText.textContent = `Total: ${total.toFixed(2)} USD`;
+  
 
       chosenSize.forEach((radio) => {
         radio.onclick = () => {
@@ -85,8 +86,8 @@ document.addEventListener("DOMContentLoaded", function () {
         if(count > 1){
           count--;
           amount.value = `Amount: ${count}`;
-          total -= currentItem.price;
-          total *= addedPrice;
+          currentPrice = currentItem.price * addedPrice;
+          total -= currentPrice;
           totalText.textContent = `Total: ${total.toFixed(2)} USD`;
         }
       });
