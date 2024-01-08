@@ -204,9 +204,9 @@ input[type="radio"]:checked+label{
 }
 
 #addItem{
-    position: relative;
-    top: 20px;
-    left: 40px;
+    position: absolute;
+    top: 350px;
+    left: 220px;
     background-color: #868686;
     width: 150px;
     height: 40px;
