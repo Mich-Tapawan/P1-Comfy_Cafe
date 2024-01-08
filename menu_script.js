@@ -57,27 +57,26 @@ document.addEventListener("DOMContentLoaded", function () {
       let amount = document.getElementById('amount');
       let totalText = document.getElementById('total');
       var count = 1;
+      let currentPrice = currentItem.price;
       var total = currentItem.price;
 
       // Drink Sizes Percentage
       let chosenSize = document.getElementsByName('size');
-      let addedPrice = 1;
       totalText.textContent = `Total: ${total.toFixed(2)} USD`;
   
 
       chosenSize.forEach((radio) => {
         radio.onclick = () => {
-          total = currentItem.price;
           if(radio.value === 'medium'){
-            addedPrice = 1.2;
+            currentPrice = currentItem.price * 1.3;
           }
           else if(radio.value === 'large'){
-            addedPrice = 1.5;
+            currentPrice = currentItem.price * 1.6;
           }
           else{
-            addedPrice = 1;
+            currentPrice = currentItem.price;
           }
-          total *= addedPrice;
+          total = currentPrice * count;
           totalText.textContent = `Total: ${total.toFixed(2)} USD`;
         }
       })
@@ -86,8 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if(count > 1){
           count--;
           amount.value = `Amount: ${count}`;
-          currentPrice = currentItem.price * addedPrice;
-          total -= currentPrice;
+          total = currentPrice * count;
           totalText.textContent = `Total: ${total.toFixed(2)} USD`;
         }
       });
@@ -95,8 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if(count < 20){
           count++;
           amount.value = `Amount: ${count}`;
-          total += currentItem.price;
-          total *= addedPrice;
+          total = currentPrice * count;
           totalText.textContent = `Total: ${total.toFixed(2)} USD`;
         }
       });
