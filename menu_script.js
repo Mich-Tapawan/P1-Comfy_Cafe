@@ -58,19 +58,26 @@ document.addEventListener("DOMContentLoaded", function () {
       let totalText = document.getElementById('total');
       var count = 1;
       var total = currentItem.price;
+      var prevTotal = total;
+
+      //Show total =>
 
       // Drink Sizes Percentage
-      let chosenSize = document.querySelector('input[name="size"]:checked');
-      let addedPrice = 1.2;
-      total *= addedPrice;
+      let chosenSize = document.getElementsByName('size');
+      let addedPrice = 1;
       totalText.textContent = `Total: ${total.toFixed(2)} USD`;
-      
-      if(chosenSize === 'medium'){
-        addedPrice = 1.2;
-      }
-      else if(chosenSize === 'large'){
-        addedPrice = 1.5;
-      }
+
+      chosenSize.forEach((radio) => {
+        total = prevTotal;
+        radio.onclick = () => {
+          if(radio.value === 'medium'){
+            addedPrice = 1.2;
+          }
+          else if(radio.value === 'large'){
+            addedPrice = 1.5;
+          }
+        }
+      })
 
       document.querySelector('#minus').addEventListener('click', () => {
         if(count > 1){
@@ -78,6 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
           amount.value = `Amount: ${count}`;
           total -= currentItem.price;
           total *= addedPrice;
+      
           totalText.textContent = `Total: ${total.toFixed(2)} USD`;
         }
       });
