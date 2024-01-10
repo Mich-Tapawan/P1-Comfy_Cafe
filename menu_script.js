@@ -50,9 +50,6 @@ document.addEventListener("DOMContentLoaded", function () {
       imagePlaceholder.src = currentItem.source;
       textPlaceholder.textContent = currentItem.label;
 
-
-
-
       // Amount toggle
       let amount = document.getElementById('amount');
       let totalText = document.getElementById('total');
@@ -99,16 +96,17 @@ document.addEventListener("DOMContentLoaded", function () {
       });
 
       document.querySelector('.order').style.display = 'block';
-      document.querySelector('body').style.height = '100%';
-      document.querySelector('body').style.overflowY = 'hidden';
       let bg = document.querySelector('.container')
-      bg.style.webkitFilter = "blur(3px)";
+      const b = document.body;
+      b.style.setProperty('--st', -(document.documentElement.scrollTop) + "px");
+      b.classList.add('noscroll');
+      bg.style.webkitFilter = "brightness(40%)";
       
 
       document.querySelector('#return').onclick = function(){
-        document.querySelector('body').style.overflowY = 'scroll';
         document.querySelector('.order').style.display = 'none';
-        document.querySelector('.container').style.webkitFilter = "blur(0px)";
+        b.classList.remove('noscroll');
+        document.querySelector('.container').style.webkitFilter = "brightness(100%)";
       }
     }
   }); 

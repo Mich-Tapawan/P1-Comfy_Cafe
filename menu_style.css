@@ -15,6 +15,13 @@
     filter: brightness(0.5);
 }
 
+.noscroll {
+    position: fixed; 
+    top: var(--st, 0);
+    inline-size: 100%;
+    overflow-y:scroll; 
+  }
+
 nav{
     display: flex;
     margin-right: 30px;
@@ -66,8 +73,10 @@ nav ul li a{
     height: 667px;
     width: 80%;
     background-color: white;
-    position: fixed;
+    position:fixed;
     display: none;
+    top: calc(50% - 333px);
+    left: calc(50% - 40%);
     padding: 20px 10px;
     border-radius: 25px;
 }
