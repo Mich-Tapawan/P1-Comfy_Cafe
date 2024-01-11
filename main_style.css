@@ -80,6 +80,23 @@ nav ul li a{
     border-width: 5px;
 }
 
+.slideButton{
+    position: absolute;
+    width: 100px;
+    height: 200px;
+    opacity: 90%;
+    top: 42%;
+    cursor: pointer;
+}
+
+#slideLeft{
+    left: 6%;
+}
+
+#slideRight{
+    left: 86%;
+}
+
 .sec-2{
     padding-top: 40px;
     width: 100%;
