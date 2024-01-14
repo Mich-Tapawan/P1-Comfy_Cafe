@@ -31,13 +31,13 @@ document.addEventListener("DOMContentLoaded", function () {
       //vs code local port = http://127.0.0.1:5500/
       alert(image.src);
       switch(image.src){
-        case 'Media/main-spread1.jpg':
+        case 'https://mich-tapawan.github.io/P1-Comfy_Cafe/Media/main-spread1.jpg':
           count = 0;
           break;
-        case 'Media/main-spread2.jpg':
+        case 'https://mich-tapawan.github.io/P1-Comfy_Cafe/Media/main-spread2.jpg':
           count = 1;
           break;
-        case 'Media/main-spread3.jpg':
+        case 'https://mich-tapawan.github.io/P1-Comfy_Cafe/Media/main-spread3.jpg':
           count = 2;
           break;
       }
