@@ -75,6 +75,7 @@ nav ul li a{
     height: 660px;
     left: 4.6%;
     z-index: 1000;
+    user-select: none;
 }
 
 #main-tarp{
