@@ -30,13 +30,13 @@ document.addEventListener("DOMContentLoaded", function () {
     button.onclick = () =>{
       //vs code local port = http://127.0.0.1:5500/
       switch(image.src){
-        case 'https://github.com/Mich-Tapawan/P1-Comfy_Cafe/tree/main/Media/main-spread1.jpg':
+        case 'https://mich-tapawan.github.io/P1-Comfy_Cafe/Media/main-spread1.jpg':
           count = 0;
           break;
-        case 'https://github.com/Mich-Tapawan/P1-Comfy_Cafe/tree/main/Media/main-spread2.jpg':
+        case 'https://mich-tapawan.github.io/P1-Comfy_Cafe/Media/main-spread2.jpg':
           count = 1;
           break;
-        case 'https://github.com/Mich-Tapawan/P1-Comfy_Cafe/tree/main/Media/main-spread3.jpg':
+        case 'https://mich-tapawan.github.io/P1-Comfy_Cafe/Media/main-spread3.jpg':
           count = 2;
           break;
       }
