@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll('.slideButton').forEach(button => {
     button.onclick = () =>{
       //vs code local port = http://127.0.0.1:5500/
+      alert(image.src);
       switch(image.src){
         case 'Media/main-spread1.jpg':
           count = 0;
