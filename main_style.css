@@ -93,7 +93,7 @@ nav ul li a{
     width: 100px;
     height: 200px;
     opacity: 90%;
-    top: 36%;
+    top: 34%;
     cursor: pointer;
     display: none;
 }
@@ -193,12 +193,20 @@ nav ul li a{
     border-style: solid;
     border-width: 20px;
     transition: transform 1s ease, border 0s ease-in-out, border-radius 0s ease-in-out;
+    animation: fadeIn 1s ease-in-out;
+    animation-timeline: view();
+    animation-range: 0px 700px;
 }
 
 .rows img:hover{
     transform: scale(1.0);
     border: 0;
     border-radius: 15px;
+}
+
+@keyframes fadeIn{
+    2%{ opacity: 0; }
+    80%{ opacity: 1; }
 }
 
 .footer{
