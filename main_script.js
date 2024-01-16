@@ -29,17 +29,11 @@ document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll('.slideButton').forEach(button => {
     button.onclick = () =>{
       //vs code local port = http://127.0.0.1:5500/
-      switch(image.src){
-        case 'https://mich-tapawan.github.io/P1-Comfy_Cafe/Media/main-spread1.jpg':
-          count = 0;
-          break;
-        case 'https://mich-tapawan.github.io/P1-Comfy_Cafe/Media/main-spread2.jpg':
-          count = 1;
-          break;
-        case 'https://mich-tapawan.github.io/P1-Comfy_Cafe/Media/main-spread3.jpg':
-          count = 2;
-          break;
-      }
+      
+      let source = image.src
+      let sliced = source.split('/')
+      let fileSource = "Media/"+sliced[4];
+      count = images.indexOf(fileSource);
 
       clearInterval(intervalID);
       if (button.getAttribute( 'id' ) === 'slideLeft'){
