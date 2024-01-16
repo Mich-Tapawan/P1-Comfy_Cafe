@@ -157,7 +157,7 @@ nav ul li a{
 
 @keyframes SlideInRight{
     from{
-        transform: translateX(400px);
+        transform: translateX(310px);
     }
     to{
         transform: translateX(0);
