@@ -78,6 +78,13 @@ nav ul li a{
     user-select: none;
 }
 
+#indicator{
+    color: blue;
+    position: relative;
+    text-align: center;
+    transform: translateY(-20px);
+}
+
 #main-tarp{
     position: relative;
     width: 1360px;

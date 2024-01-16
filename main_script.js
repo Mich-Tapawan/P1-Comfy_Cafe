@@ -35,6 +35,8 @@ document.addEventListener("DOMContentLoaded", function () {
       let fileSource = "Media/"+sliced[sliced.length - 1];
       count = images.indexOf(fileSource);
 
+      document.querySelector('#indicator').innerHTML = source;
+
       clearInterval(intervalID);
       if (button.getAttribute( 'id' ) === 'slideLeft'){
         if(count === 0){
