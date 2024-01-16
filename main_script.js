@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
       
       let source = image.src
       let sliced = source.split('/')
-      let fileSource = "Media/"+sliced[4];
+      let fileSource = "Media/"+sliced[sliced.length - 1];
       count = images.indexOf(fileSource);
 
       clearInterval(intervalID);
