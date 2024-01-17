@@ -185,21 +185,28 @@ nav ul li a{
     width: 96%;
 }
 
-.rows img{
-    position: relative;
-    right: 5.3%;
-    width: 440px;
+.parent{
     height: 300px;
+    width: 400px;
+    position: relative;
+    overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
-    transition: transform 1s ease, border 0s ease-in-out, border-radius 0s ease-in-out;
     animation: fadeIn 1s ease-in-out;
     animation-timeline: view();
     animation-range: 0px 700px;
 }
 
+.rows img{
+    position: relative;
+    right: 5.3%;
+    width: 440px;
+    height: 300px;
+    transition: all 1s;
+}
+
 .rows img:hover{
-    border-radius: 10px;
+    transform: scale(1.15);
 }
 
 @keyframes fadeIn{
