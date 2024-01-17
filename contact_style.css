@@ -189,6 +189,27 @@ nav ul li a{
     color: #3B2929;
 }
 
+.success{
+    display: flex;
+    position: absolute;
+    bottom: 6px;
+    align-items: center;
+    left: 280px;
+    display: none;
+}
+
+.success svg{
+    position: absolute;
+    display: inline-block;
+    left: -80px;
+    top: 6px;
+}
+
+.success h5{
+    position: relative;
+    display: inline-block;
+}
+
 .footer{    
     width: 100%;
     height: 230px;

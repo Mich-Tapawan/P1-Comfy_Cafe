@@ -5,6 +5,12 @@ document.addEventListener("DOMContentLoaded", function () {
         const email = document.querySelector('#email').value;
         const message = document.querySelector('#message').value;
 
+        document.querySelector('.success').style.display = 'block';
+
+        setTimeout(() => {
+          document.querySelector('.success').style.display = 'none';
+        }, 20000);
+
         if(name === "" && email === "" && message === ""){
           alert("Error: Missing input!");
         }
