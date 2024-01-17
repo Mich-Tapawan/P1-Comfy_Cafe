@@ -190,8 +190,8 @@ nav ul li a{
     right: 5.3%;
     width: 440px;
     height: 300px;
-    border-style: solid;
-    border-width: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
     transition: transform 1s ease, border 0s ease-in-out, border-radius 0s ease-in-out;
     animation: fadeIn 1s ease-in-out;
     animation-timeline: view();
@@ -199,9 +199,7 @@ nav ul li a{
 }
 
 .rows img:hover{
-    transform: scale(1.0);
-    border: 0;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 @keyframes fadeIn{
