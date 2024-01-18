@@ -97,16 +97,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
       document.querySelector('.order').style.display = 'block';
       let bg = document.querySelector('.container')
-      const b = document.body;
-      b.style.setProperty('--st', -(document.documentElement.scrollTop) + "px");
-      b.classList.add('noscroll');
       bg.style.webkitFilter = "brightness(40%)";
+      document.querySelector('.footer').style.webkitFilter = "brightness(40%)";
       
 
       document.querySelector('#return').onclick = function(){
         document.querySelector('.order').style.display = 'none';
-        b.classList.remove('noscroll');
         document.querySelector('.container').style.webkitFilter = "brightness(100%)";
+        document.querySelector('.footer').style.webkitFilter = "brightness(100%)";
       }
     }
   }); 
