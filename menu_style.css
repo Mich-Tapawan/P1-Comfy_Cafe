@@ -85,12 +85,23 @@ nav ul li a{
     justify-content: center;
 }
 
+.imageContainer{
+    background-color: blue;
+    width: 400px;
+    height: 400px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 40px;
+    bottom: 10px;
+}
+
 .left img{
     position: relative;
-    transform: translateX(-40px);
-    height: 80%;
-    width: 60%;
-    bottom: 5%;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
 }
 
 .vl {
