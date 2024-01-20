@@ -426,7 +426,6 @@ input[type="radio"]:checked+label{
 
     #nav-name{
         transform: translateX(-17vw);
-        font-size: 20px;
     }
 
     #page-links{
@@ -489,15 +488,19 @@ input[type="radio"]:checked+label{
     }
 
     #fixedNav img{
-        transform: translateX(-7vw);
+        transform: translateX(-9vw);
+        width: 58px;
+        height: 58px;
     }
 
     #nav-name{
-        transform: translateX(-7vw);
+        transform: translateX(-9vw);
+        font-size: 30px;
+        bottom: 10px;
     }
 
     #page-links{
-        transform: translateX(-36vw);
+        transform: translateX(-34vw);
     }
 
     .container{
@@ -514,11 +517,14 @@ input[type="radio"]:checked+label{
     }
 
     #fixedNav img{
-        transform: translateX(-3vw);
+        transform: translateX(-7vw);
+        bottom: 0px;
     }
 
     #nav-name{
-        transform: translateX(-3vw);
+        transform: translateX(-7vw);
+        font-size: 25px;
+        bottom: 4px;
     }
 
     #page-links{
