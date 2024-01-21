@@ -348,6 +348,9 @@ input[type="radio"]:checked+label{
 }
 
 .items img{
+    height: 148px;
+    width: 148px;
+    border-radius: 50%;
     box-shadow: 1px 1px 15px rgb(146, 145, 145);
     object-fit: cover;
 }
@@ -357,12 +360,6 @@ input[type="radio"]:checked+label{
     border-color: #513B3B;
     border-width: 2px;
     border-style: solid;
-}
-
-.items img{
-    height: 148px;
-    width: 148px;
-    border-radius: 50%;
 }
 
 .footer{
@@ -518,13 +515,13 @@ input[type="radio"]:checked+label{
 
     #fixedNav img{
         transform: translateX(-7vw);
-        bottom: 0px;
+        bottom: -4px;
     }
 
     #nav-name{
         transform: translateX(-7vw);
         font-size: 25px;
-        bottom: 4px;
+        bottom: 0px;
     }
 
     #page-links{
@@ -536,6 +533,15 @@ input[type="radio"]:checked+label{
         height: 1100px;
         border-radius: 40px;
         padding: 20px 70px;
+    }
+
+    .items img{
+        height: 128px;
+        width: 128px;
+    }
+
+    .items h4{
+        font-size: 14px;
     }
 
 }
