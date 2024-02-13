@@ -515,12 +515,14 @@ input[type="radio"]:checked+label{
 
     #fixedNav img{
         transform: translateX(-7vw);
-        bottom: -4px;
+        width: 50px;
+        height: 50px;
+        bottom: -5px;
     }
 
     #nav-name{
         transform: translateX(-7vw);
-        font-size: 25px;
+        font-size: 23px;
         bottom: 0px;
     }
 
