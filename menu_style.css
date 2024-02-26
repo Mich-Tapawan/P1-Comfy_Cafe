@@ -522,7 +522,7 @@ input[type="radio"]:checked+label{
 
     #nav-name{
         transform: translateX(-9vw);
-        font-size: 23px;
+        font-size: 22px;
         bottom: 0px;
     }
 
